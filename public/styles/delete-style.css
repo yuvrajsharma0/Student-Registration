@@ -22,6 +22,7 @@ main {
 
 .student-info {
 	margin-bottom: 1rem;
+	text-align: center;
 }
 
 .cancel-link {
@@ -46,4 +47,9 @@ main {
 
 .delete-button:hover {
 	background-color: #555;
+}
+
+.container {
+	text-align: center;
+	margin-top: 30px;
 }
