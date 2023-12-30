@@ -1,0 +1,38 @@
+/*
+  Commands for Sequelize migrations to create all the tables
+*/
+
+-- Creating (Generating) Models and Migrations of "Institute", "Course", "Person", and "Student"
+
+  npx sequelize model:generate --name Institute --attributes name:string,
+
+  npx sequelize model:generate --name Course --attributes name:string
+
+  npx sequelize model:generate --name Person --attributes name:string,address:string,phone:string,email:string
+
+  npx sequelize model:generate --name Student --attributes instituteId:integer,courseId:integer,personId:integer
+
+-- Commands for Running Migrations (UP):
+  npx sequelize db:migrate
+
+-- Undoing Migrations (DOWN):
+  npx sequelize-cli db:migrate:undo
+
+/*
+  Initialize "Institutes" and "Courses" table with Data:
+*/
+
+-- Institute
+INSERT INTO public."Institutes"
+("name", "address", "phone", "email", "createdAt", "updatedAt")
+VALUES
+('MITRC', 'Alwar', '999999999', 'mitrc@email.com', now(), now()),
+('BITS', 'Pilani', '999999999', 'bits@email.com', now(), now());
+
+-- Courses
+INSERT INTO public."Courses"
+("name", "createdAt", "updatedAt")
+VALUES
+('B.Tech', now(), now()), 
+('BSc', now(), now()),
+('B.A.', now(), now());

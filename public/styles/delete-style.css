@@ -1,0 +1,49 @@
+body {
+	font-family: "Arial", sans-serif;
+	margin: 0;
+	padding: 0;
+	background-color: #f4f4f4;
+}
+
+header {
+	background-color: #333;
+	color: #fff;
+	padding: 1rem;
+	text-align: center;
+}
+
+main {
+	max-width: 800px;
+	margin: 2rem auto;
+	background-color: #fff;
+	padding: 2rem;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.student-info {
+	margin-bottom: 1rem;
+}
+
+.cancel-link {
+	display: block;
+	margin-top: 1rem;
+	color: #333;
+	text-decoration: none;
+}
+
+.delete-form {
+	margin-top: 1rem;
+}
+
+.delete-button {
+	background-color: #333;
+	color: #fff;
+	padding: 0.5rem 1rem;
+	border: none;
+	cursor: pointer;
+	font-size: 16px;
+}
+
+.delete-button:hover {
+	background-color: #555;
+}

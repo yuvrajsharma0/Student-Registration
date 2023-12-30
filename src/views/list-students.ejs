@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="/styles/style.css" />
+		<title>Students List</title>
+	</head>
+
+	<body>
+		<header>
+			<h1>Students List</h1>
+		</header>
+
+		<main>
+			<ul class="students-list">
+				<% students.forEach(student => { %>
+				<li>
+					<div class="student-info">
+						<strong><%= student.person.name %></strong>
+						from <%= student.institute.name %>, enrolled in <%=
+						student.course.name %>
+					</div>
+
+					<a href="/<%= student.id %>/delete" class="delete-link">Delete</a>
+				</li>
+				<% }); %>
+			</ul>
+			<a href="/create" class="create-link">Create New Student</a>
+		</main>
+	</body>
+</html>
