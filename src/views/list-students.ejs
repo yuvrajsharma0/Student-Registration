@@ -15,20 +15,35 @@
 		<main>
 			<a href="/create" class="create-link">Create New Student</a>
 			<br />
+			<hr />
 
-			<ul class="students-list">
+			<table class="student-table">
+				<tr>
+					<th>ID</th>
+					<th>Name</th>
+					<th>Address</th>
+					<th>Phone</th>
+					<th>Email</th>
+					<th>Institute</th>
+					<th>Course</th>
+				</tr>
+
 				<% students.forEach(student => { %>
-				<li>
-					<div class="student-info">
-						<strong><%= student.person.name %></strong>
-						from <strong><%= student.institute.name %></strong>, enrolled in
-						<strong><%=student.course.name %></strong>
-					</div>
+				<tr>
+					<td><%= student.id %></td>
+					<td><%= student.person.name %></td>
+					<td><%= student.person.address %></td>
+					<td><%= student.person.phone %></td>
+					<td><%= student.person.email %></td>
+					<td><%= student.institute.name %></td>
+					<td><%= student.course.name %></td>
 
-					<a href="/<%= student.id %>/delete" class="delete-link">Delete</a>
-				</li>
+					<td>
+						<a href="/<%= student.id %>/delete" class="delete-link">Delete</a>
+					</td>
+				</tr>
 				<% }); %>
-			</ul>
+			</table>
 		</main>
 	</body>
 </html>

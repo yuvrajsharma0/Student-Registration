@@ -14,27 +14,19 @@ header {
 
 main {
 	max-width: 800px;
+	width: auto;
 	margin: 2rem auto;
 	background-color: #fff;
 	padding: 2rem;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.students-list {
-	list-style: none;
-	padding: 0;
-}
-
-.students-list li {
-	margin-bottom: 1rem;
-	border-bottom: 1px solid #ccc;
-	padding-bottom: 0.5rem;
-	display: flex;
-	justify-content: space-between;
-}
-
-.student-info {
-	flex-grow: 1;
+.student-table {
+	width: 100%;
+	text-align: center;
+	background-color: aliceblue;
+	margin: 2px;
+	padding: 5px;
 }
 
 .delete-link {
